@@ -1,5 +1,5 @@
 // location of data file
-let csv = 'mrc_table2.csv';
+let csv = 'HW2Sort.csv';
 console.log("CSV:"+csv);
 
 // configuration of svg/plot area
@@ -42,7 +42,7 @@ function convertRow(row,index){
             break;
           case 'state':
             out[col] = row[col];
-            console.log("state:"+out[col]);
+             // console.log("state:"+out[col]);
             break;
           case 'tier':
             out[col] = row[col];
@@ -50,8 +50,12 @@ function convertRow(row,index){
             break;
           case 'iclevel':
             out[col] = parseInt(row[col]);
-            // console.log("iclevel:"+out[col]);
+            console.log("iclevel:"+out[col]);
             break;
+          case 'par_mean':
+          out[col] = parseInt(row[col]);
+           // console.log("Par Mean:"+out[col]);
+          break;
           case 'region':
             out[col] = parseInt(row[col]);
             // console.log("region:"+out[col]);
@@ -62,15 +66,24 @@ function convertRow(row,index){
 }
 
 function drawChart(data){
-  data.sort(function(a,b){
-    return a['state'].localeCompare(b['state']) || a['type']-b['type']
-  });
+  // data = data.filter(function(row) {
+  //     return row['par_mean'] > 200000;
+  // });
+  // data = data.filter(function(row) {
+  //     return row['state'] === "CA"|| row['state'] === "NY" || row['state'] ==="NJ";
+  // });
+  // data.sort(function(a,b){
+  //   return a['state'].localeCompare(b['state']) || a['type']-b['type']
+  // });
 
+  console.log("data:"+JSON.stringify(data));
   var color = d3.scaleOrdinal()
-    .domain(["CA", "NJ", "MA", ])
-    .range([ "#440154ff", "#21908dff", "#fde725ff"])
-  // console.log("Data:"+JSON.stringify(data));
-  dimensions = d3.keys(data[0]).filter(function(d) { return d != "state"})
+    .domain(["CA","NJ","NY",])
+    .range(["#bf6969","#69bf69","#6969bf"])
+    // .domain(["CA"])
+    // .range([ "#DC143C"])
+  // console.log("Data1:"+JSON.stringify(data));
+  dimensions = d3.keys(data[0]).filter(function(d) { return d != "state" && d != "par_mean"})
 
   function path(d) {
       return d3.line()(dimensions.map(function(p) { return [x(p), y[p](d[p])]; }));
@@ -80,7 +93,7 @@ function drawChart(data){
     name = dimensions[i]
     y[name] = d3.scaleLinear()
      // .domain([1,14])
-    .domain( d3.extent(data, function(d) { return +d[name]; }) )
+    .domain( d3.extent(data, function(d) { return d[name]; }) )
     .range([config.svg.height, 0])
   }
   x = d3.scalePoint()
@@ -92,7 +105,7 @@ function drawChart(data){
      .data(data)
      .enter()
      .append("path")
-     .attr("class", function (d) { return "line " + d.state } ) // 2 class for each line: 'line' and the group name
+     .attr("class", function (d) { return d.state } )
      .attr("d",  path)
      .style("fill", "none" )
      .style("stroke", function(d){ return( color(d.state))} )
@@ -104,11 +117,9 @@ function drawChart(data){
      .data(dimensions).enter()
      .append("g")
      .attr("class", "axis")
-     // I translate this element to its right position on the x axis
      .attr("transform", function(d) { return "translate(" + x(d) + ")"; })
-     // And I build the axis with the call function
      .each(function(d) { d3.select(this).call(d3.axisLeft().ticks(5).scale(y[d])); })
-     // Add axis title
+
      .append("text")
        .style("text-anchor", "middle")
        .style("font", "14px times")
