@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- TODO: Change title -->
-    <title>Website Template</title>
+    <title>Paul's homework2</title>
 
     <!-- Load Bulma from CDN (consider saving it to repository instead) -->
     <!-- https://bulma.io/ -->
@@ -25,9 +25,9 @@
     <div class="hero-body">
       <div class="container">
         <!-- TODO: Change title -->
-        <h1 class="title">Website Title</h1>
+        <h1 class="title">Data Visualizations homework</h1>
         <!-- TODO: Change subtitle -->
-        <h2 class="subtitle">Website Subtitle</h2>
+        <h2 class="subtitle">Paul Ke</h2>
       </div>
     </div>
   </section>
@@ -35,11 +35,9 @@
 
   <!-- Page navigation -->
   <!-- https://bulma.io/documentation/components/navbar/ -->
-  <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+  <!-- <nav class="navbar is-light" role="navigation" aria-label="main navigation">
     <div class="container">
       <div class="navbar-brand">
-        <!-- TODO: Change link to repository homepage if needed -->
-        <!-- TODO: Change which navbar-item is-active if needed -->
         <a class="navbar-item is-active" href="index.html">
           <span class="icon"><i class="fas fa-home"></i></span>
           <span>Home</span>
@@ -53,14 +51,14 @@
       </div>
 
       <div id="main-menu" class="navbar-menu has-text-weight-medium">
-        <!-- Left navbar items -->
+
         <div class="navbar-start">
           <a class="navbar-item" href="#data" title="Data">
             <span class="icon"><i class="fas fa-table"></i></span>
             <span>Data</span>
           </a>
 
-          <!-- TODO: Modify or remove dropdown -->
+
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link">
               Visualizations
@@ -88,11 +86,11 @@
               </a>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <!-- Right navbar items -->
-        <div class="navbar-end">
-          <!-- TODO: Update as needed -->
+        <!-- <div class="navbar-end">
+
           <a class="navbar-item" href="#about" title="About">
             <span class="icon"><i class="fas fa-tasks"></i></span>
             <span>Grade</span>
@@ -105,50 +103,72 @@
         </div>
       </div>
     </div>
-  </nav>
+  </nav> -->
   <!-- End page navigation -->
 
   <section class="section">
     <div class="container">
       <!-- Begin page content -->
       <div class="content">
-        <h1 class="title">
+        <h3 class="title">
           <!-- TODO: Change page title -->
-          Page Title
-        </h1>
-        <p class="subtitle">
-          <!-- TODO: Change page subtitle -->
+        Introduction
+      </h3>
+        <!-- <p class="subtitle">
+          TODO: Change page subtitle
           Page Subtitle
-        </p>
+        </p> -->
 
-        <p>This would be an excellent place to describe what this page is for, what to find in different sections, describe any motivation or theme behind your visualizations, and so on.</p>
+        <p>This data source reports our baseline estimates of family income distributions by college. </p>
 
-        <p>You should not use this template unless you intend to customize it. Make it your own. Keep in mind this simple template is over 300 lines! You can see other examples of websites using Bulma at their showcase: <a href="https://bulma.io/expo/">bulma.io/expo/</a>.</p>
-
-        <h2 id="data">Data</h2>
-
-        <p>Include some detailed information about the dataset here. You should <a href="#">add a link</a> to the original dataset. You might also want to quote the license:</p>
+        <p>My research focus on the family which has incomer over 200000 in CA, NJ and NY state, becaue I have been live in this three states before</p>
+        <p> I would like to see the  colleges  varies  greatly  by  parent  high income in this three state.</p>
+        <h3 id="data">Data</h3>
+        <p>Multiple colleges share a single identifier in the tax records. In these cases, researchers report averages over all students attending the relevant group of colleges. For these groups
+of colleges and assign locations based on the location of the largest school/campus with the group of
+colleges. <a href="https://opportunityinsights.org/wp-content/uploads/2018/04/Codebook-MRC-Table-2.pdf">Here is the link of data source</a> </p>
 
         <blockquote>
           <p>
-            "This data is made available under the Public Domain Dedication and License v1.0 whose full text can be found at: <a href="http://www.opendatacommons.org/licenses/pddl/1.0/">www.opendatacommons.org/licenses/pddl/1.0/</a>"
+            "This data is made available under the Opportunityinsights.org  <a href="https://opportunityinsights.org//">Here is the link</a>"
           </p>
-          <cite>Put a citation here, possibly link to the dataset license information directly.</cite>
+          <!-- <cite>Put a citation here, possibly link to the dataset license information directly.</cite> -->
         </blockquote>
 
-        <p>In addition to including a link to the source and license, you should describe the data. You might want a list of some sort to enumerate the different types of columns:</p>
+        <!-- <p>In addition to including a link to the source and license, you should describe the data. You might want a list of some sort to enumerate the different types of columns:</p> -->
 
-        <ol>
-          <li><strong>Column Name:</strong> Give a description of the column, including its type and possible range of values.</li>
+        <ul>
+          <li><strong>Type:</strong> <li style="list-style-type:circle">1 represent public school </li><li style="list-style-type:circle">2 represent private but not-profit school </li> <li style="list-style-type:circle">3 represent for-profit school</li></li>
 
-          <li><strong>Column Name:</strong> Give a description of the column, including its type and possible range of values.</li>
+          <li><strong>tier:</strong><li style="list-style-type:circle">1 preresent Ivy Plus</li>
+          <li style="list-style-type:circle">2 represent Other elite schools (public and private)</li>
+          <li style="list-style-type:circle">3 represent Highly selective public</li>
+          <li style="list-style-type:circle">4 represent Highly selective private</li>
+          <li style="list-style-type:circle">5 represent Selective public</li>
+          <li style="list-style-type:circle">6 represent Selective private</li>
+          <li style="list-style-type:circle">7 represent Nonselective 4-year public</li>
+          <li style="list-style-type:circle">8 represent Nonselective 4-year private not-for-profit</li>
+          <li style="list-style-type:circle">9 represent Two-year (public and private not-for-profit)</li>
+          <li style="list-style-type:circle">10 represent Four-year for-profit</li>
+          <li style="list-style-type:circle">11 represent Two-year for-profit</li>
+          <li style="list-style-type:circle">12 represent Less than two year schools of any type</li>
+          <li style="list-style-type:circle">13 represent Attending college with insufficient data</li>
+          <li style="list-style-type:circle">14 represent Not in college between the ages of 19-22</li>
 
-          <li><strong>Column Name:</strong> Give a description of the column, including its type and possible range of values.</li>
+          <li><strong>iclevel:</strong>
+            <li style="list-style-type:circle">1 represent Four-year</li>
+            <li style="list-style-type:circle">2 represent Two-year</li>
+            <li style="list-style-type:circle">3 represent Less than Two-year.</li>
 
-          <li><strong>Column Name:</strong> Give a description of the column, including its type and possible range of values.</li>
-        </ol>
+          <li><strong>Region:</strong>
+              <li style="list-style-type:circle">1 = Northeast</li>
+              <li style="list-style-type:circle">2 = Midwest</li>
+                <li style="list-style-type:circle">3 = South</li>
+                  <li style="list-style-type:circle">4 = West</li>
+                  </li>
+        </ul>
 
-        <p>This will of course differ depending on the assignment and data.</p>
+        <!-- <p>This will of course differ depending on the assignment and data.</p>
 
         <h3 id="wrangling">Wrangling</h3>
 
@@ -162,9 +182,9 @@ You can even put code into these pre blocks.
 
         <p>You can alternatively embed a Gist if you want. There is an "embed" button on <a href="https://gist.github.com/octocat/6cad326836d38bd3a7ae">the Gist page</a> and results in something like this:</p>
 
-        <script src="https://gist.github.com/octocat/6cad326836d38bd3a7ae.js"></script>
+        <script src="https://gist.github.com/octocat/6cad326836d38bd3a7ae.js"></script> -->
 
-        <h2 id="visualizations">Visualizations</h2>
+        <!-- <h2 id="visualizations">Visualizations</h2>
 
         <p>Ideally not everything would be on a single page like this example. Instead, you might want to put each section in its own webpage. You would need to carefully replicate the page template (with the header, navbar, and footer) and make the necessary updates. For example, you want the "About" navbar item to be considered active on an "About" web page.</p>
 
@@ -198,12 +218,23 @@ You can even put code into these pre blocks.
             </span>
             <span>Pie Chart</span>
           </a>
-        </p>
-
+        </p> -->
+        <h3>Here is the prototype</h3>
+        <div>
+        <img src="HW2.png" alt="Girl in a jacket" width="500" height="900">
+        </div>
+        <h3>Here is the chart made by D3.js</h3>
         <div id="parallelChart"></div>
         <script src="parallelChart.js"></script>
 
-
+        <h3>Conclusion</h3>
+        <p>
+          The chart cleary state that the most children from higher-income family are going to private and not-profit schools. They all at least take 4-years education and go Nonselective college
+          We can see the higher-income family member alway has four year college education experience.
+        </p>
+        <p>
+          Here is the fun fact from data, those higher-income family all come from northeast and east region in CA, NJ and NY state.
+        </p>
         <!-- https://github.com/vega/vega-embed#basic-example -->
         <!-- <p>It is possible to embed some visualizations directly here too. Here is <a href="https://github.com/vega/vega-embed#basic-example">an example</a> using Vega-Lite:</p>
 
@@ -295,22 +326,22 @@ You can even put code into these pre blocks.
         <article class="media">
           <!-- TODO: Replace with profile photo -->
           <figure class="media-left">
-            <p class="image is-128x128"><img class="is-rounded" src="profile.png"></p>
+            <p class="image is-128x128"><img class="is-rounded" src="sef.png"></p>
           </figure>
 
           <div class="media-content">
             <div class="content">
               <!-- TODO: Replace with contact information -->
               <p>
-                <strong>Full Name</strong><br/>
+                <strong>Paul Ke</strong><br/>
                 CS Major, <a href="https://www.usfca.edu/">University of San Francisco</a><br/>
-                <em>Expected Graduation: 20??</em><br/>
-                <i class="fas fa-envelope"></i> <a href="mailto:username@dons.usfca.edu">username@dons.usfca.edu</a>
+                <em>Expected Graduation: May 2020</em><br/>
+                <i class="fas fa-envelope"></i> <a href="mailto:yke7@dons.usfca.edu">yke7@dons.usfca.edu</a>
               </p>
 
               <!-- TODO: Replace with brief biography -->
               <p>
-                Here is a brief bio about yourself. A good rule of thumb is to include at least one technical tidbit (favorite area or course within computer science), and one fun tidbit (such as loving dogs).
+                To prepare for my career, I am pursuing my education degree from the University Of San Francisco and majoring in Computer Science and Marketing. I know theoretical applications and have individual ability to help develop new technology to solve many of the problems associated with the computer industry.
               </p>
 
               <!-- TODO: Replace or remove tags -->

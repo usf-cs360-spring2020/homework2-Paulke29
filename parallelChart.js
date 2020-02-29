@@ -113,13 +113,11 @@ function drawChart(data){
 
 
    svg.selectAll("myAxis")
-     // For each dimension of the dataset I add a 'g' element:
      .data(dimensions).enter()
      .append("g")
      .attr("class", "axis")
      .attr("transform", function(d) { return "translate(" + x(d) + ")"; })
      .each(function(d) { d3.select(this).call(d3.axisLeft().ticks(5).scale(y[d])); })
-
      .append("text")
        .style("text-anchor", "middle")
        .style("font", "14px times")
